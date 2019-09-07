@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title class="nomeaba">Text Bar</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+	</head>
+	<body>
+
+		<header>
+			<div class="container">
+				<h1 class="tit1">Módulo IMC</h1>
+			</div>
+		</header>
+		
+		
+		<br>
+		
+		<section class="container"> <!-- Formulário -->
+			<h2 id="titulo-form">Adicionar novo paciente</h2>
+			<form id="formAdd">
+				<div class="grupo"><!--Nome-->
+					<label for="nome">Nome:</label>
+					<input id="nome" name="nome" type="text" placeholder="digite o nome do seu paciente" class="campo">
+				</div>
+				<br>
+				<div class="grupo"><!--Peso-->
+					<label for="peso">Peso:</label>
+					<input id="peso" name="peso" type="text" placeholder="digite o peso do seu paciente" class="campo campo-medio">
+				</div>
+				<div class="grupo"><!--Altura-->
+					<label for="altura">Altura:</label>
+					<input id="altura" name="altura" type="text" placeholder="digite a altura do seu paciente" class="campo campo-medio">
+				</div>
+				<div class="grupo"><!--Gordura-->
+					<label for="gordura">% de Gordura:</label>
+					<input id="gordura" type="text" placeholder="digite a porcentagem de gordura do seu paciente" class="campo campo-medio">
+				</div>
+
+				<button id="adicionar-paciente" class="botao bto-principal">Adicionar</button>
+			</form>
+		</section>
+		
+		<br>	
+		
+		<main>
+
+
+			
+			<br><section class="container">
+				<h2 class = "aga2">Table title</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>Cod</th>
+							<th>Nome</th>
+							<th>Peso<br>(kg)</th>
+							<th>Altura<br>(M)</th>
+							<th>Gordura Corporal<br>(%)</th>
+							<th>IMC</th>
+							<th>Diagnóstico</th>
+						</tr>
+
+					</thead>
+					<tbody id="tabela-pacientes">
+						<tr class="linha-paciente" id="pac1">
+							<td class="info-cod">1</td>
+							<td class="info-nome">Paulo</td>
+							<td class="info-peso">100</td>
+							<td class="info-altura">1.6</td>
+							<td class="info-gordura">10</td>
+							<td class="imc-res"></td>
+							<td class="info-cond"></td>
+						</tr>
+
+						<tr class="linha-paciente" id="pac2" >
+							<td class="info-cod">2</td>
+							<td class="info-nome">Jaider</td>
+							<td class="info-peso">93.5</td>
+							<td class="info-altura">1.89</td>
+							<td class="info-gordura">0</td>
+							<td class="imc-res"></td>
+							<td class="info-cond"></td>
+						</tr>
+
+						<tr class="linha-paciente" id="pac3">
+							<td class="info-cod">3</td>
+							<td class="info-nome">Erica</td>
+							<td class="info-peso">500</td>
+							<td class="info-altura">161</td>
+							<td class="info-gordura">14</td>
+							<td class="imc-res"></td>
+							<td class="info-cond"></td>
+						</tr>
+
+						<tr class="linha-paciente" id="pac4">
+							<td class="info-cod">4</td>
+							<td class="info-nome">João</td>
+							<td class="info-peso">100</td>
+							<td class="info-altura">173</td>
+							<td class="info-gordura">24</td>
+							<td class="imc-res"></td>
+							<td class="info-cond"></td>
+						</tr>
+						<tr class="linha-paciente" id="pac5">
+							<td class="info-cod">5</td>
+							<td class="info-nome">Tatiana</td>
+							<td class="info-peso">60</td>
+							<td class="info-altura">1.55</td>
+							<td class="info-gordura">19</td>
+							<td class="imc-res"></td>
+							<td class="info-cond"></td>
+						</tr>
+
+					</tbody>
+				</table>
+			</section>
+		</main>
+		
+		<!-- Estudo com Formulário -->
+		
+		<script src = "js/functions.js"></script>
+		<script src = "js/form.js"></script>
+		<script src = "js/main.js"></script>
+		<!--<script src = "js/functions.js"></script>-->
+		
+		
+	</body>
+</html>

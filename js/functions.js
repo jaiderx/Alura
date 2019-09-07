@@ -1,0 +1,157 @@
+var clientes = document.querySelectorAll(".linha-paciente");
+
+
+function CorrigeAltura() {
+  var txt;
+  var corrigealtura = prompt("Altura do paciente "+Pessoa.Nome+" inválida! Corrija ou confirme: ",Pessoa.Altura);
+  if (corrigealtura == null || corrigealtura == "") {
+	txt = Pessoa.Altura;
+  } else {
+	txt = corrigealtura;
+	Pessoa.Altura=txt;
+  }
+  Pessoa.TdAltura.textContent=txt;
+  if (txt > 0.2 && txt < 2.5){
+		altinvalida=false;
+	}else{
+		altinvalida=true;
+	}
+  //document.getElementById("demo").innerHTML = txt;
+}
+	
+function CorrigePeso() {
+  var txt;
+  var corrigepeso = prompt("Peso do paciente "+Pessoa.Nome+" inválido! Corrija ou confirme: ",Pessoa.Peso);
+  if (corrigepeso == null || corrigepeso == "") {
+	txt = Pessoa.Peso;
+  } else {
+	txt = corrigepeso;
+	Pessoa.Peso = txt;
+  }
+  Pessoa.TdPeso.textContent=txt;
+	if (txt > 1 && txt < 400){
+		pesoinv=false;
+	}else{
+		pesoinv=true;
+	}
+  //document.getElementById("demo").innerHTML = txt;
+}
+
+function Diagnostico(imc){
+	if (imc < 17) { //Subnutrição
+			Condicao = {
+				Cond: "Subnutrição",
+				Class:"pesoSub"
+			}
+	}
+	if (imc >= 17 && imc < 18.5) { //Abaixo do peso
+			Condicao = {
+				Cond: "Abaixo do Peso",
+				Class:"pesoBai"
+			}
+	}
+	if (imc >= 18.5 && imc < 25) { //Peso Ideal
+			Condicao = {
+				Cond: "Peso Ideal",
+				Class:"pesoNor"
+			}
+	}
+	if (imc >= 25 && imc < 30) { //Sobrepeso
+			Condicao = {
+				Cond: "Sobrepeso",
+				Class:"pesoSob"
+			}
+	}
+	if (imc >= 30 && imc < 35) { //Obesidade I
+			Condicao = {
+				Cond: "Obesidade I",
+				Class:"pesoObe"
+			}
+	}
+	if (imc >= 35 && imc < 40) { //Obesidade II Severa
+			Condicao = {
+				Cond: "Obesidade II (Severa)",
+				Class:"pesoSev"
+			}
+	}
+	if (imc >= 40) { //Obesidade III Morbida
+			Condicao = {
+				Cond: "Obesidade III (Mórbida)",
+				Class:"pesoMor"
+			}
+	}
+	return Condicao
+}
+
+function carimbo(){
+	let t = new Date();
+	return ("0" + t.getHours()).slice(-2)+":"+("0" + t.getMinutes()).slice(-2)+":"+("0" + t.getSeconds()).slice(-2)+" - "
+}
+
+function importForm(form){ //importa dados formulário
+	//var	tdcond = .querySelector(".info-cond");
+	var Pessoa = {
+		Nome:form.nome.value,
+		Peso: form.peso.value,
+		Altura: form.altura.value,
+		Gordura: form.gordura.value,	/*	
+		TdNome:tdnome,
+		TdImc: tdimc,
+		TdPeso: tdpeso,
+		TdAltura: tdaltura,
+		TdGord: tdgord,
+		TdCond:tdcond*/
+	}
+	return Pessoa;
+}
+
+function importDoc(clientes,i){		
+	var tdnome = clientes[i].querySelector(".info-nome");
+	var	tdimc = clientes[i].querySelector(".imc-res");
+	var	tdpeso = clientes[i].querySelector(".info-peso");
+	var	tdaltura = clientes[i].querySelector(".info-altura");
+	var	tdcond = clientes[i].querySelector(".info-cond");
+	var	tdgord = clientes[i].querySelector(".info-gordura");
+
+	var Pessoa = {
+			Nome: tdnome.textContent,
+			Peso: tdpeso.textContent,
+			Altura: tdaltura.textContent,
+			Gordura: tdgord.textContent,
+			Imc: tdimc.textContent,
+			Cond: tdcond.textContent,
+			TdNome:tdnome,
+			TdImc: tdimc,
+			TdPeso: tdpeso,
+			TdAltura: tdaltura,
+			TdGord: tdgord,
+			TdCond:tdcond
+		}
+	return Pessoa;
+}
+
+function validAltura(altura){//testa altura inválida
+	if (altura > 0.2 && altura < 2.5){ 
+	return false;
+	}else{
+		return true;
+	}
+}
+
+function validPeso(peso){//testa Peso inválido
+	if(peso >1 && peso <400){ 
+			return false;
+		}else {
+			return true;
+		}
+}
+	
+function clicTit(){ //pega cliques no título
+	console.log("Título clicado");
+}
+
+function CalcImc(peso,altura){
+	var calcimc;
+	calcimc=(peso/(Math.pow(altura,2))).toFixed(2);
+	return calcimc;
+}
