@@ -37,6 +37,7 @@ var botaoAdicionar = document.querySelector("#adicionar-paciente");
 	alert("Paciente inserido com sucesso! ");
 	
 	
+	
 	tabela.appendChild(insertLine);	
 	insertLine.appendChild(insCodData);
 	insertLine.appendChild(insNameData);
