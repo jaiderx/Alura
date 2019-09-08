@@ -15,7 +15,7 @@ for (var i=0; i<clientes.length; i++) { //varre cada um e faz a iteração do IM
 		var pacientes = clientes[i];
 		var Pessoa = importDoc(clientes,i);
 
-		var validalt = validAlt(Pessoa.Altura); 
+		var validalt = validAlt(Pessoa.Altura);
 		var validapes = validPes(Pessoa.Peso);
 		
 		if (validalt.Valid == false && validapes.Valid == false){ //Exibe Altura e Peso inválidos
