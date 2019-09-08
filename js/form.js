@@ -55,6 +55,10 @@ function montaTr(Pessoa){
 		
 		
 	var pesoTd = montaTd(Pessoa.Peso,"info-peso");
+	var nomeTd = montaTd(Pessoa.Nome,"info-nome");
+	var alturaTd = montaTd(Pessoa.Altura,"info-nome");
+	var gorduraTd = montaTd(Pessoa.Gordura,"info-nome");
+	
 		
 		
 }
@@ -63,6 +67,5 @@ function montaTd(dado,classe){
 	var td = document.createElement("td");
 		td.textContent = dado;
 		td.classList.add(classe);
-		
 	return 	td;
 }

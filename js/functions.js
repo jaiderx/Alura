@@ -94,7 +94,9 @@ function importForm(form){ //importa dados formulário
 		Nome:form.nome.value,
 		Peso: form.peso.value,
 		Altura: form.altura.value,
-		Gordura: form.gordura.value,	/*	
+		Gordura: form.gordura.value,
+		Imc: CalcImc(form.peso.value, form.altura.value)
+		/*	
 		TdNome:tdnome,
 		TdImc: tdimc,
 		TdPeso: tdpeso,
