@@ -9,8 +9,7 @@ var botaoAdicionar = document.querySelector("#adicionar-paciente");
 	var form = document.querySelector("#formAdd");
 	var Pessoa = importForm(form);
 	
-	var imcCalc = CalcImc(Pessoa.Peso,Pessoa.Altura);
-	var diag = Diagnostico(imcCalc);
+	var diag = Diagnostico(Pessoa.Imc);
 	
 	
 	var tabela = document.querySelector("#tabela-pacientes");
@@ -24,17 +23,17 @@ var botaoAdicionar = document.querySelector("#adicionar-paciente");
 			var tgimc = document.createElement("td");
 			var insCondData = document.createElement("td");
 	
-	insCodData.textContent = cont+1;
-	insNameData.textContent = Pessoa.Nome;
-	insPesoData.textContent = Pessoa.Peso;
-	insAltData.textContent = Pessoa.Altura;
-	insGordData.textContent = Pessoa.Gordura;
-	insertLine.classList.add("linha-paciente");
-	tgimc.textContent = imcCalc;
-	insCondData.textContent = diag.Cond;
-	insCondData.classList.add(diag.Class);
-	tgimc.classList.add("calcImc");
-	alert("Paciente inserido com sucesso! ");
+				insCodData.textContent = cont+1;
+				insNameData.textContent = Pessoa.Nome;
+				insPesoData.textContent = Pessoa.Peso;
+				insAltData.textContent = Pessoa.Altura;
+				insGordData.textContent = Pessoa.Gordura;
+				insertLine.classList.add("linha-paciente");
+				tgimc.textContent = Pessoa.Imc;
+				insCondData.textContent = diag.Cond;
+				insCondData.classList.add(diag.Class);
+				tgimc.classList.add("calcImc");
+				alert("Paciente inserido com sucesso! ");
 	
 	
 	
@@ -50,22 +49,24 @@ var botaoAdicionar = document.querySelector("#adicionar-paciente");
 
 function montaTr(Pessoa){
 	
-	var insertLine = document.createElement("tr");
-		insertLine.classList.add("linha-paciente");
+	var insertRow = document.createElement("tr");
+		insertRow.classList.add("linha-paciente");
+				
+		insertRow.appendChild(montaTd(Pessoa.Nome,"info-nome");
+		insertRow.appendChild(montaTd(Pessoa.Nome,"info-nome");
+		insertRow.appendChild(montaTd(Pessoa.Peso,"info-peso");
+		insertRow.appendChild(montaTd(Pessoa.Altura,"info-altura");
+		insertRow.appendChild(montaTd(Pessoa.Gordura,"info-gordura");
+		insertRow.appendChild(montaTd(Pessoa.Imc,"imc-res");
 		
-		
-	var pesoTd = montaTd(Pessoa.Peso,"info-peso");
-	var nomeTd = montaTd(Pessoa.Nome,"info-nome");
-	var alturaTd = montaTd(Pessoa.Altura,"info-nome");
-	var gorduraTd = montaTd(Pessoa.Gordura,"info-nome");
-	
-		
-		
+		return insertRow;
 }
 
 function montaTd(dado,classe){
 	var td = document.createElement("td");
+	
 		td.textContent = dado;
 		td.classList.add(classe);
+		
 	return 	td;
 }
