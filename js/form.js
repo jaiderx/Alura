@@ -11,11 +11,11 @@ var botaoAdicionar = document.querySelector("#adicionar-paciente");
 	var Pessoa = importForm(form);
 	
 	if (!validaPessoa(Pessoa)){
-	console.log("Paciente inválido");;
-	alert("Paciente não cadastrado. Dados inválidos");
-	var erro = document.querySelector("#msgerro");
-	erro.textContent = "Dados Inválidos";
-	return;
+		console.log("Paciente inválido");;
+		alert("Paciente não cadastrado. Dados inválidos");
+		var erro = document.querySelector("#msgerro");
+			erro.textContent = "Dados Inválidos";
+		return;
 	}
 	
 	var imcCalc = CalcImc(Pessoa.Peso,Pessoa.Altura);

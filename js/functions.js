@@ -113,11 +113,8 @@ function importDoc(clientes,i){	//importa dados HTML
 function validaPessoa(pessoa){ //reune validações de peso e altura
 	var valalt = validAlt(pessoa.Altura);
 	var valpes = validPes(pessoa.Peso);
-	if (valalt.Valid && valpes.Valid){
-		return true;
-	}else{
-		return false;
-	}
+	if (valalt.Valid && valpes.Valid) return true;
+	else return false;
 }
 
 function validAlt(altura){//testa altura válida
@@ -154,9 +151,7 @@ function validPes(peso){//testa peso válido
 	return valida
 }
 
-function clicTit(){ //pega cliques no título
-	console.log("Título clicado");
-}
+
 
 function CalcImc(peso,altura){
 	var calcimc;
@@ -182,9 +177,7 @@ function montaTd(dado,classe,classeExt){
 	var td = document.createElement("td");
 		td.textContent = dado;
 		td.classList.add(classe);
-		if (classeExt != null || classeExt != ""){
-			td.classList.add(classeExt);		
-		}
+		if (classeExt != null || classeExt != "") td.classList.add(classeExt);		
 	return 	td;
 }
 
