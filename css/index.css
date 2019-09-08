@@ -188,3 +188,7 @@ button[disabled=disabled], button:disabled {
 	
 	text-align: right;
 }
+
+#msgerro{
+	color:red;
+}

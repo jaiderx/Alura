@@ -70,7 +70,3 @@ for (var i=0; i<clientes.length; i++) { //varre cada um e faz a iteração do IM
 		}
 	}
 
-
-
-
-

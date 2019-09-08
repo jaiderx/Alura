@@ -13,6 +13,8 @@ var botaoAdicionar = document.querySelector("#adicionar-paciente");
 	if (!validaPessoa(Pessoa)){
 	console.log("Paciente inválido");;
 	alert("Paciente não cadastrado. Dados inválidos");
+	var erro = document.querySelector("#msgerro");
+	erro.textContent = "Dados Inválidos";
 	return;
 	}
 	
