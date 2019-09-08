@@ -112,6 +112,16 @@ function importDoc(clientes,i){	//importa dados HTML
 	return Pessoa;
 }
 
+function validaPessoa(pessoa){ //reune validações de peso e altura
+	var valalt = validAlt(pessoa.Altura);
+	var valpes = validPes(pessoa.Peso);
+	if (valalt.Valid && valpes.Valid){
+		return true;
+	}else{
+		return false;
+	}
+}
+
 function validAlt(altura){//testa altura válida
 		if (altura > 0.2 && altura < 2.5){
 			var valida = {
@@ -146,22 +156,6 @@ function validPes(peso){//testa peso válido
 	return valida
 }
 
-function validAltura(altura){//testa altura inválida
-	if (altura > 0.2 && altura < 2.5){
-	return false;
-	}else{
-		return true;
-	}
-}
-
-function validPeso(peso){//testa Peso inválido
-	if(peso > 1 && peso <400){
-			return false;
-		}else {
-			return true;
-		}
-}
-	
 function clicTit(){ //pega cliques no título
 	console.log("Título clicado");
 }

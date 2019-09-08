@@ -10,10 +10,14 @@ var botaoAdicionar = document.querySelector("#adicionar-paciente");
 	var form = document.querySelector("#formAdd");
 	var Pessoa = importForm(form);
 	
+	if (!validaPessoa(Pessoa)){
+	console.log("Paciente inválido");;
+	alert("Paciente não cadastrado. Dados inválidos");
+	return;
+	}
+	
 	var imcCalc = CalcImc(Pessoa.Peso,Pessoa.Altura);
 	var diag = Diagnostico(imcCalc);
-	
-	
 	
 	var tabela = document.querySelector("#tabela-pacientes");
 	var pessoaTr = montaTr(Pessoa);
