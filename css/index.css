@@ -181,6 +181,7 @@ button[disabled=disabled], button:disabled {
 
 .erroAltPes{
 	background-color: yellow;
+	font-weight: bold;
 }
 
 .recalc{

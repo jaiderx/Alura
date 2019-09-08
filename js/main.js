@@ -14,14 +14,17 @@ tgaga2.style.textAlign = 'center';
 for (var i=0; i<clientes.length; i++) { //varre cada um e faz a iteração do IMC	
 		var pacientes = clientes[i];
 		var Pessoa = importDoc(clientes,i);
-		var altinvalida = validAltura(Pessoa.Altura);
-		var pesoinv = validPeso(Pessoa.Peso);
 
-		if (altinvalida == true && pesoinv == true){ //Exibe Altura e Peso inválidos
+		var validalt = validAlt(Pessoa.Altura);
+		var validapes = validPes(Pessoa.Peso);
+		
+		if (validalt.Valid == false && validapes.Valid == false){ //Exibe Altura e Peso inválidos
 			alert("Altura e peso do paciente "+Pessoa.Nome+" inválidos!");
 			CorrigeAltura();
 			CorrigePeso();
-			if (altinvalida == true && pesoinv == true){
+			validalt = validAlt(Pessoa.Altura);
+			validapes = validPes(Pessoa.Peso);
+			if (validalt.Valid == false && validapes.Valid == false){
 				Pessoa.TdImc.textContent = "Erro Altura/Peso";
 				pacientes.classList.add("erroAltPes");
 				Pessoa.TdCond.textContent = "----";
@@ -30,29 +33,32 @@ for (var i=0; i<clientes.length; i++) { //varre cada um e faz a iteração do IM
 				Pessoa.TdImc.textContent = CalcImc(Pessoa.Peso,Pessoa.Altura);
 			}
 		}
-		if (altinvalida == true && pesoinv == false){//Exibe Altura Inválida
+		
+		if (validalt.Valid == false && validapes.Valid == true){//Exibe Altura Inválida
 			alert("Altura do paciente "+Pessoa.Nome+" inválida!");
 			CorrigeAltura();
-			if (altinvalida == true && pesoinv == false) { 
-				Pessoa.TdImc.textContent = "Erro Altura";
-				pacientes.classList.add("erroAltPes");
+			validalt = validAlt(Pessoa.Altura);
+			if (validalt.Valid == false && validapes.Valid == true) { 
+				Pessoa.TdImc.textContent = validalt.Text;
+				pacientes.classList.add(validalt.Class);
 				Pessoa.TdCond.textContent = "----";
 			}else{
 				Pessoa.TdImc.textContent = CalcImc(Pessoa.Peso,Pessoa.Altura);
 			}
 		}
-		if (altinvalida == false && pesoinv == true){ //Exibe Peso Inválido
+		if (validalt.Valid == true && validapes.Valid == false){ //Exibe Peso Inválido
 			alert ("Peso do paciente "+Pessoa.Nome+" inválido!");
 			CorrigePeso();
-			if (altinvalida == false && pesoinv == true) {
-				Pessoa.TdImc.textContent = "Erro Peso";
-				pacientes.style.backgroundColor= "yellow";
+			validapes = validPes(Pessoa.Peso);
+			if (validalt.Valid == true && validapes.Valid == false) {
+				Pessoa.TdImc.textContent = validapes.Text;
+				pacientes.classList.add(validapes.Class);
 				Pessoa.TdCond.textContent = "----";
 			}else{
 				Pessoa.TdImc.textContent = CalcImc(Pessoa.Peso,Pessoa.Altura);
 			}
 		}
-		if (altinvalida == false && pesoinv == false){ //Exibe cálculo IMC
+		if (validalt.Valid == true && validapes.Valid == true){ //Exibe cálculo IMC
 				Pessoa.TdImc.textContent = CalcImc(Pessoa.Peso,Pessoa.Altura);
 				Pessoa.TdImc.classList.add("calcImc");
 		 }

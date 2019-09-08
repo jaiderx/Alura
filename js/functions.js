@@ -95,13 +95,6 @@ function importForm(form){ //importa dados formulário
 		Altura: form.altura.value,
 		Gordura: form.gordura.value,
 		Imc: CalcImc(form.peso.value, form.altura.value)
-		/*	
-		TdNome:tdnome,
-		TdImc: tdimc,
-		TdPeso: tdpeso,
-		TdAltura: tdaltura,
-		TdGord: tdgord,
-		TdCond:tdcond*/
 	}
 	return Pessoa;
 }
@@ -131,8 +124,41 @@ function importDoc(clientes,i){
 	return Pessoa;
 }
 
+function validAlt(altura){//testa altura válida
+		if (altura > 0.2 && altura < 2.5){
+			var valida = {
+				Valid: true,
+				Text: altura,
+				Class: ""
+			}
+		}else{
+			var valida = {
+				Valid: false,
+				Text: "Erro Altura",
+				Class: "erroAltPes"
+			}
+		}
+	return valida
+}
+function validPes(peso){//testa peso válido
+	if(peso > 1 && peso <400){
+			var valida = {
+				Valid: true,
+				Text: peso,
+				Class: ""
+			}
+		}else{
+			var valida = {
+				Valid: false,
+				Text: "Erro Peso",
+				Class: "erroAltPes"
+			}
+		}
+	return valida
+}
+
 function validAltura(altura){//testa altura inválida
-	if (altura > 0.2 && altura < 2.5){ 
+	if (altura > 0.2 && altura < 2.5){
 	return false;
 	}else{
 		return true;
@@ -140,7 +166,7 @@ function validAltura(altura){//testa altura inválida
 }
 
 function validPeso(peso){//testa Peso inválido
-	if(peso >1 && peso <400){ 
+	if(peso > 1 && peso <400){
 			return false;
 		}else {
 			return true;
