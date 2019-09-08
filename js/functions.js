@@ -10,12 +10,6 @@ function CorrigeAltura() {
 	Pessoa.Altura=txt;
   }
   Pessoa.TdAltura.textContent=txt;
-  if (txt > 0.2 && txt < 2.5){
-		altinvalida=false;
-	}else{
-		altinvalida=true;
-	}
-  //document.getElementById("demo").innerHTML = txt;
 }
 	
 function CorrigePeso() {
@@ -28,12 +22,6 @@ function CorrigePeso() {
 	Pessoa.Peso = txt;
   }
   Pessoa.TdPeso.textContent=txt;
-	if (txt > 1 && txt < 400){
-		pesoinv=false;
-	}else{
-		pesoinv=true;
-	}
-  //document.getElementById("demo").innerHTML = txt;
 }
 
 function Diagnostico(imc){
@@ -99,7 +87,7 @@ function importForm(form){ //importa dados formulário
 	return Pessoa;
 }
 
-function importDoc(clientes,i){		
+function importDoc(clientes,i){	//importa dados HTML	
 	var tdnome = clientes[i].querySelector(".info-nome");
 	var	tdimc = clientes[i].querySelector(".imc-res");
 	var	tdpeso = clientes[i].querySelector(".info-peso");
@@ -140,6 +128,7 @@ function validAlt(altura){//testa altura válida
 		}
 	return valida
 }
+
 function validPes(peso){//testa peso válido
 	if(peso > 1 && peso <400){
 			var valida = {
