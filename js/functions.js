@@ -163,27 +163,24 @@ function montaTr(Pessoa){
 	var insertRow = document.createElement("tr");
 		insertRow.classList.add("linha-paciente");
 		diag = Diagnostico(Pessoa.Imc);
-	
 		insertRow.appendChild(montaTd(cont+1,"info-cod"));
 		insertRow.appendChild(montaTd(Pessoa.Nome,"info-nome"));
 		insertRow.appendChild(montaTd(Pessoa.Peso,"info-peso"));
 		insertRow.appendChild(montaTd(Pessoa.Altura,"info-altura"));
 		insertRow.appendChild(montaTd(Pessoa.Gordura,"info-gordura"));
-		insertRow.appendChild(montaTd(Pessoa.Imc,"imc-res"));
+		insertRow.appendChild(montaTd(Pessoa.Imc,"imc-res","calcImc"));
 		insertRow.appendChild(montaTd(diag.Cond,diag.Class,"info-cond"));
-
-
 		return insertRow;
 	}
 
 
 function montaTd(dado,classe,classeExt){
 	var td = document.createElement("td");
-	
 		td.textContent = dado;
 		td.classList.add(classe);
-		td.classList.add(classeExt);
-		
+		if (classeExt != null || classeExt != ""){
+			td.classList.add(classeExt);		
+		}
 	return 	td;
 }
 
