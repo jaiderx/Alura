@@ -1,6 +1,5 @@
 var clientes = document.querySelectorAll(".linha-paciente");
 
-
 function CorrigeAltura() {
   var txt;
   var corrigealtura = prompt("Altura do paciente "+Pessoa.Nome+" inválida! Corrija ou confirme: ",Pessoa.Altura);
@@ -158,7 +157,6 @@ function CalcImc(peso,altura){
 	return calcimc;
 }
 
-
 function montaTr(Pessoa){
 	var insertRow = document.createElement("tr");
 		insertRow.classList.add("linha-paciente");
@@ -172,7 +170,6 @@ function montaTr(Pessoa){
 		insertRow.appendChild(montaTd(diag.Cond,diag.Class,"info-cond"));
 		return insertRow;
 	}
-
 
 function montaTd(dado,classe,classeExt){
 	var td = document.createElement("td");
