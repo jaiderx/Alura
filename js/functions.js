@@ -76,7 +76,6 @@ function carimbo(){
 }
 
 function importForm(form){ //importa dados formulário
-	//var	tdcond = .querySelector(".info-cond");
 	var Pessoa = {
 		Nome:form.nome.value,
 		Peso: form.peso.value,
@@ -94,7 +93,6 @@ function importDoc(clientes,i){	//importa dados HTML
 	var	tdaltura = clientes[i].querySelector(".info-altura");
 	var	tdcond = clientes[i].querySelector(".info-cond");
 	var	tdgord = clientes[i].querySelector(".info-gordura");
-
 	var Pessoa = {
 			Nome: tdnome.textContent,
 			Peso: tdpeso.textContent,
