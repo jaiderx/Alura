@@ -6,4 +6,3 @@ var botaoAdicionar = document.querySelector("#adicionar-paciente");
 var form = document.querySelector("#formAdd");
 var tabela = document.querySelector("#tabela-pacientes");
 var ul = document.querySelector("#msgerro");
-var clientes = document.querySelectorAll(".linha-paciente");
