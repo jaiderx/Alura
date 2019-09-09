@@ -1,11 +1,8 @@
-var tit1 = document.querySelector('.tit1');
-var aba = document.querySelector('.nomeaba');
 
 tit1.textContent="Módulo IMC";
 aba.textContent="Sistema Nutricionista";
 console.log(carimbo()+tit1.textContent);
 
-var tgaga2 = document.querySelector('.aga2');
 tgaga2.textContent = "Tabela de Pacientes";
 tgaga2.style.textAlign = 'center';
 

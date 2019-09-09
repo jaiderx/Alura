@@ -1,4 +1,3 @@
-var clientes = document.querySelectorAll(".linha-paciente");
 
 function CorrigeAltura() {
   var txt;
@@ -187,7 +186,6 @@ function montaTd(dado,classe,classeExt){
 }
 
 function exibeMensagensDeErro(erros) {
-    var ul = document.querySelector("#msgerro");
     ul.innerHTML = "";
 
     erros.forEach(function(erro) {
