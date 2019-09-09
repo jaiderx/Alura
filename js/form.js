@@ -11,9 +11,9 @@ var botaoAdicionar = document.querySelector("#adicionar-paciente");
 	var Pessoa = importForm(form);
 	
 	var valida = validaPessoa(Pessoa);
-	console.log(valida);
-	if (valida.length >0){
-		console.log("Dados inválidos");;
+	console.log(valida.length);
+	 if (valida.length >0){
+		console.log("Dados inválidos");
 		alert("Paciente não cadastrado. Dados inválidos");
 		var erro = document.querySelector("#msgerro");
 			erro.textContent = valida;
@@ -31,4 +31,3 @@ var botaoAdicionar = document.querySelector("#adicionar-paciente");
 	form.reset();
 	
 });
-

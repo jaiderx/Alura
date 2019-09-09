@@ -113,7 +113,8 @@ function importDoc(clientes,i){	//importa dados HTML
 function validaPessoa(pessoa){ //reune validações de peso e altura
 	var valalt = validAlt(pessoa.Altura);
 	var valpes = validPes(pessoa.Peso);
-	if (valalt.Valid && valpes.Valid);
+	if (valalt.Valid && valpes.Valid)
+	return "";
 		else if(!valalt.Valid && valpes.Valid) return "Altura inválida";
 			else if(valalt.Valid && !valpes.Valid) return "Peso inválido";
 				else if(!valalt.Valid && !valpes.Valid) return "Altura e peso inválidos";
@@ -153,8 +154,6 @@ function validPes(peso){//testa peso válido
 	return valida
 }
 
-
-
 function CalcImc(peso,altura){
 	var calcimc;
 	calcimc=(peso/(Math.pow(altura,2))).toFixed(2);
@@ -182,4 +181,3 @@ function montaTd(dado,classe,classeExt){
 		if (classeExt != null || classeExt != "") td.classList.add(classeExt);		
 	return 	td;
 }
-
