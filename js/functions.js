@@ -120,6 +120,20 @@ function validaPessoa(pessoa){ //reune validações de peso e altura
 				else if(!valalt.Valid && !valpes.Valid) return "Altura e peso inválidos";
 }
 
+function valida2(pessoa){
+	var erros = [];
+	var valalt = validAlt(pessoa.Altura);
+	var valpes = validPes(pessoa.Peso);
+	if (!valalt.Valid) erros.push(valalt.Text);
+	if (!valpes.Valid) erros.push(valpes.Text);
+	if (pessoa.Nome.length == 0) erros.push("Nome em branco");
+	if (pessoa.Altura.length == 0) erros.push("Altura em branco");
+	if (pessoa.Peso.length == 0) erros.push("Peso em branco");
+	if (pessoa.Gordura.length == 0) erros.push("Percentual de gordura em branco");
+	
+	return erros;
+}
+
 function validAlt(altura){//testa altura válida
 		if (altura > 0.2 && altura < 2.5){
 			var valida = {
@@ -130,7 +144,7 @@ function validAlt(altura){//testa altura válida
 		}else{
 			var valida = {
 				Valid: false,
-				Text: "Erro Altura",
+				Text: "Altura inválida!",
 				Class: "erroAltPes"
 			}
 		}
@@ -180,4 +194,15 @@ function montaTd(dado,classe,classeExt){
 		td.classList.add(classe);
 		if (classeExt != null || classeExt != "") td.classList.add(classeExt);		
 	return 	td;
+}
+
+function exibeMensagensDeErro(erros) {
+    var ul = document.querySelector("#msgerro");
+    ul.innerHTML = "";
+
+    erros.forEach(function(erro) {
+        var li = document.createElement("li");
+        li.textContent = erro;
+        ul.appendChild(li);
+    });
 }
