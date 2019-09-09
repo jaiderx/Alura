@@ -113,8 +113,10 @@ function importDoc(clientes,i){	//importa dados HTML
 function validaPessoa(pessoa){ //reune validações de peso e altura
 	var valalt = validAlt(pessoa.Altura);
 	var valpes = validPes(pessoa.Peso);
-	if (valalt.Valid && valpes.Valid) return true;
-	else return false;
+	if (valalt.Valid && valpes.Valid);
+		else if(!valalt.Valid && valpes.Valid) return "Altura inválida";
+			else if(valalt.Valid && !valpes.Valid) return "Peso inválido";
+				else if(!valalt.Valid && !valpes.Valid) return "Altura e peso inválidos";
 }
 
 function validAlt(altura){//testa altura válida
