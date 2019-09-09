@@ -10,23 +10,15 @@ var botaoAdicionar = document.querySelector("#adicionar-paciente");
 	var form = document.querySelector("#formAdd");
 	var Pessoa = importForm(form);
 	
-	var erros = valida2(Pessoa);
+	var erros = valida(Pessoa);
 	console.log(erros);
+	
+	
 	if(erros.length > 0){
 		exibeMensagensDeErro(erros);
+		alert("Paciente não cadastrado. Dados inválidos");
     return;
 }	
-	// console.log(valida);
-	 // if (valida.length >0){
-		// console.log("Dados inválidos");
-		// alert("Paciente não cadastrado. Dados inválidos");
-		
-		// mensagem(valida);
-		
-		// var erro = document.querySelector("#msgerro");
-			// erro.textContent = valida;
-		// return;
-	// }
 	
 	var imcCalc = CalcImc(Pessoa.Peso,Pessoa.Altura);
 	var diag = Diagnostico(imcCalc);

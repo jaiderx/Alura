@@ -110,17 +110,7 @@ function importDoc(clientes,i){	//importa dados HTML
 	return Pessoa;
 }
 
-function validaPessoa(pessoa){ //reune validações de peso e altura
-	var valalt = validAlt(pessoa.Altura);
-	var valpes = validPes(pessoa.Peso);
-	if (valalt.Valid && valpes.Valid)
-	return "";
-		else if(!valalt.Valid && valpes.Valid) return "Altura inválida";
-			else if(valalt.Valid && !valpes.Valid) return "Peso inválido";
-				else if(!valalt.Valid && !valpes.Valid) return "Altura e peso inválidos";
-}
-
-function valida2(pessoa){
+function valida(pessoa){
 	var erros = [];
 	var valalt = validAlt(pessoa.Altura);
 	var valpes = validPes(pessoa.Peso);
