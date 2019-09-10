@@ -1,4 +1,3 @@
-
 tit1.textContent="Módulo IMC";
 aba.textContent="Sistema Nutricionista";
 console.log(carimbo()+tit1.textContent);
