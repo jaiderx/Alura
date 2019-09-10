@@ -19,6 +19,7 @@ header h1{
 	display:inline-block;
 	vertical-align:	middle;
 }
+
 header h2{
 	font-size: 2em;
 	display:inline-block;
@@ -81,7 +82,7 @@ label{
 	padding-bottom: 1em;
 	width: 100%;
 	border: 1px solid #ccc;
-	padding: .9em;
+	padding: 1.0em;
 	width: 100%;
 }
 
@@ -95,7 +96,6 @@ label{
 	display: inline-block;
 	padding: 10px 0px;
 }
-
 
 button{
 	padding: .5em 2em;
@@ -134,14 +134,11 @@ button[disabled=disabled], button:disabled {
 	border: 1px solid red;
 }
 
-
-
 .calcImc{
 	font-weight: bold;
 }
 
-.pesoSub{
-	
+.pesoSub{	
 	font-weight: bold;
 	background-color:lightcoral;
 	color:"red";
@@ -151,7 +148,6 @@ button[disabled=disabled], button:disabled {
 	font-weight: bold;
 	color:red;
 }
-
 
 .pesoNor{
 	font-weight: bold;
@@ -191,4 +187,9 @@ button[disabled=disabled], button:disabled {
 
 #msgerro{
 	color:red;
+}
+
+.fadeOut{
+	opacity: 0;
+	transition: 0.75s;
 }

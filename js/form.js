@@ -1,5 +1,3 @@
-var cont = clientes.length;
-
 	botaoAdicionar.addEventListener("click",function(event){ //Botão Adicionar
 	event.preventDefault();
 	console.log(carimbo()+"Botão adicionar clicado");
@@ -12,7 +10,7 @@ var cont = clientes.length;
 		exibeMensagensDeErro(erros);
 		alert("Paciente não cadastrado. Dados inválidos");
     return;
-}	
+	}	
 
 	var imcCalc = CalcImc(Pessoa.Peso,Pessoa.Altura);
 	var diag = Diagnostico(imcCalc);

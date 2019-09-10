@@ -167,7 +167,6 @@ function montaTr(Pessoa){
 	var insertRow = document.createElement("tr");
 		insertRow.classList.add("linha-paciente");
 		diag = Diagnostico(Pessoa.Imc);
-		insertRow.appendChild(montaTd(cont+1,"info-cod"));
 		insertRow.appendChild(montaTd(Pessoa.Nome,"info-nome"));
 		insertRow.appendChild(montaTd(Pessoa.Peso,"info-peso"));
 		insertRow.appendChild(montaTd(Pessoa.Altura,"info-altura"));
