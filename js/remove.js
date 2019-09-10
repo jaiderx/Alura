@@ -1,4 +1,4 @@
-table.addEventListener("dblclick",function(event){
+tabela.addEventListener("dblclick",function(event){
 	event.target.parentNode.classList.add("fadeOut");
 
 	setTimeout(function(){
