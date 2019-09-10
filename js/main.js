@@ -4,7 +4,7 @@ aba.textContent="Sistema Nutricionista";
 console.log(carimbo()+tit1.textContent);
 
 tgaga2.textContent = "Tabela de Pacientes";
-tgaga2.style.textAlign = 'center';
+//tgaga2.style.textAlign = 'center';
 
 //Busca todos os pacientes
 

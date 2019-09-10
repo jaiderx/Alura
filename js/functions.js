@@ -1,7 +1,6 @@
-
 function CorrigeAltura() {
-  var txt;
-  var corrigealtura = prompt("Altura do paciente "+Pessoa.Nome+" inválida! Corrija ou confirme: ",Pessoa.Altura);
+  let txt;
+  let corrigealtura = prompt("Altura do paciente "+Pessoa.Nome+" inválida! Corrija ou confirme: ",Pessoa.Altura);
   if (corrigealtura == null || corrigealtura == "") {
 	txt = Pessoa.Altura;
   } else {
@@ -12,8 +11,8 @@ function CorrigeAltura() {
 }
 	
 function CorrigePeso() {
-  var txt;
-  var corrigepeso = prompt("Peso do paciente "+Pessoa.Nome+" inválido! Corrija ou confirme: ",Pessoa.Peso);
+  let txt;
+  let corrigepeso = prompt("Peso do paciente "+Pessoa.Nome+" inválido! Corrija ou confirme: ",Pessoa.Peso);
   if (corrigepeso == null || corrigepeso == "") {
 	txt = Pessoa.Peso;
   } else {
@@ -25,43 +24,43 @@ function CorrigePeso() {
 
 function Diagnostico(imc){
 	if (imc < 17) { //Subnutrição
-			Condicao = {
+			var Condicao = {
 				Cond: "Subnutrição",
 				Class:"pesoSub"
 			}
 	}
 	if (imc >= 17 && imc < 18.5) { //Abaixo do peso
-			Condicao = {
+			var Condicao = {
 				Cond: "Abaixo do Peso",
 				Class:"pesoBai"
 			}
 	}
 	if (imc >= 18.5 && imc < 25) { //Peso Ideal
-			Condicao = {
+			var Condicao = {
 				Cond: "Peso Ideal",
 				Class:"pesoNor"
 			}
 	}
 	if (imc >= 25 && imc < 30) { //Sobrepeso
-			Condicao = {
+			var Condicao = {
 				Cond: "Sobrepeso",
 				Class:"pesoSob"
 			}
 	}
 	if (imc >= 30 && imc < 35) { //Obesidade I
-			Condicao = {
+			var Condicao = {
 				Cond: "Obesidade I",
 				Class:"pesoObe"
 			}
 	}
 	if (imc >= 35 && imc < 40) { //Obesidade II Severa
-			Condicao = {
+			var Condicao = {
 				Cond: "Obesidade II (Severa)",
 				Class:"pesoSev"
 			}
 	}
 	if (imc >= 40) { //Obesidade III Morbida
-			Condicao = {
+			var Condicao = {
 				Cond: "Obesidade III (Mórbida)",
 				Class:"pesoMor"
 			}
@@ -158,7 +157,7 @@ function validPes(peso){//testa peso válido
 }
 
 function CalcImc(peso,altura){
-	var calcimc;
+	let calcimc;
 	calcimc=(peso/(Math.pow(altura,2))).toFixed(2);
 	return calcimc;
 }

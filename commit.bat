@@ -3,5 +3,5 @@ color 0f
 title Commit GIT
 cd %userprofile%\Downloads\introducao-javascript-inicial\introducao-javascript
 git add -A
-git commit -m "Aula 07 - Remocao, delegacao e animacao - Ativ 03 - Animando a remocao dos pacientes"
+git commit -m "Substituindo var por let"
 git push -u -f origin master
