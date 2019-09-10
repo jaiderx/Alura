@@ -6,5 +6,5 @@ var clientes = document.querySelectorAll(".linha-paciente");
 var form = document.querySelector("#formAdd");
 var botaoAdicionar = document.querySelector("#adicionar-paciente");
 
-var tabela = document.querySelector("#tabela-pacientes");
+var grid = document.querySelector("#tabela-pacientes");
 var ul = document.querySelector("#msgerro");

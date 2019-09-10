@@ -23,7 +23,7 @@ for (var i=0; i<clientes.length; i++) { //varre cada um e faz a iteração do IM
 			validapes = validPes(Pessoa.Peso);
 			if (validalt.Valid == false && validapes.Valid == false){
 				Pessoa.TdImc.textContent = "Erro Altura/Peso";
-				pacientes.classList.add("erroAltPes");
+				pacientes.classList.add(validalt.Class);
 				Pessoa.TdCond.textContent = "----";
 			}
 			else{

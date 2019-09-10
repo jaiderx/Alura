@@ -5,13 +5,16 @@
 body{
 	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	font-size: 14px;
+	background-color:#303030;
+	
 }
 
 header{
 	background-color: #333;
 	height: 3em;
-	color: #FFF;
+	color: #A9A9A9;
 	margin-bottom: 1em;
+	text-align: center!important;
 }
 
 header h1{
@@ -51,6 +54,7 @@ section h2{
 	border-bottom: 1px solid #ccc;
 	margin-bottom: .5em;
 	text-align:center;
+	color: white;
 }
 
 table{
@@ -69,11 +73,11 @@ td, th {
 
 th{
 	font-weight: bold;
-	background-color: #EEE;
+	background-color: #A9A9A9;/* #EEE;*/
 }
 
 label{
-	color: #555;
+	color: white;
 	display: block;
 	margin-bottom: .2em;
 }
@@ -85,11 +89,13 @@ label{
 	border: 1px solid #ccc;
 	padding: 1.0em;
 	width: 100%;
+	color:white;
 }
 
 .campo-medio{
 	display: inline-block;
 	padding-right: .5em;
+	background-color:#202020;
 }
 
 .grupo{
@@ -107,8 +113,8 @@ button{
 	margin: 0;
 	margin-top: -3px;
 	color: #fff;
-	background-color:#0c8cd3;
-	border-color: #04324c;
+	background-color:#778899;
+	border-color: #202020;
 	width: 20%;
     display: block;
     clear: both;
@@ -142,12 +148,13 @@ button[disabled=disabled], button:disabled {
 .pesoSub{	
 	font-weight: bold;
 	background-color:lightcoral;
-	color:"red";
+	color:red;
 }
 
 .pesoBai{
 	font-weight: bold;
 	color:red;
+	background-color: #778899 !important;
 }
 
 .pesoNor{
@@ -163,21 +170,24 @@ button[disabled=disabled], button:disabled {
 .pesoObe{
 	font-weight: bold;
 	color:red;
+	background-color: #778899 !important;
 }
 
 .pesoSev{
 	font-weight: bold;
+	background-color:lightcoral!important;
 	color:red;
 }
 
 .pesoMor{
 	font-weight: bold;
-	background-color:lightcoral;
-	color:red;
+	background-color:red!important;
+	color:white;
 }
 
 .erroAltPes{
 	background-color: yellow;
+	color: red!important;
 	font-weight: bold;
 }
 
@@ -187,10 +197,22 @@ button[disabled=disabled], button:disabled {
 }
 
 #msgerro{
-	color:red;
+	color:#FFB6C1;
 }
 
 .fadeOut{
 	opacity: 0;
 	transition: 0.75s;
+}
+placeholder{
+	color: white;
+}
+
+.linha-paciente{
+	color: white;
+	font-weight: bold;
+}
+
+#titulo-form{
+	text-align:left!important;
 }

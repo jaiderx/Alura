@@ -16,7 +16,7 @@
 	var diag = Diagnostico(imcCalc);
 	
 	var pessoaTr = montaTr(Pessoa);
-	tabela.appendChild(pessoaTr);	
+	grid.appendChild(pessoaTr);	
 	
 	alert("Paciente inserido com sucesso! ");
 	form.reset();
