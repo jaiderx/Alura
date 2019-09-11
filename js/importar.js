@@ -6,6 +6,9 @@ botaoImportar.addEventListener("click",function(){
 	xhr.open("GET","https://api-pacientes.herokuapp.com/pacientes");
 	
 	xhr.addEventListener("load",function(){
+		
+		if (xhr.status == 200){
+		console.log(xhr.status);
 		var response = xhr.responseText;
 		var pacientesJson = JSON.parse(response);
 
@@ -20,6 +23,9 @@ botaoImportar.addEventListener("click",function(){
 				incluiPaciente(pessoaImport);
 		});
 		
+		}else{
+			console.log("Erro");
+		}
 	});
 	
 	xhr.send();

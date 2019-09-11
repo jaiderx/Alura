@@ -199,8 +199,8 @@ function exibeMensagensDeErro(erros) {
     });
 }
 	
-	function incluiPaciente(Pessoa){
-		var pessoaTr = montaTr(Pessoa);
-		grid.appendChild(pessoaTr);	
-	}
+function incluiPaciente(Pessoa){
+	var pessoaTr = montaTr(Pessoa);
+	grid.appendChild(pessoaTr);	
+}
 
