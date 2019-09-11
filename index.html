@@ -51,6 +51,8 @@
 			
 			<br><section class="container">
 				<h2 class = "aga2"></h2>
+				<label for="filtro">Filtro:</label>
+				<input type="txt"name="filtro" id="filtro" placeholder="Pesquisar nome"></input>
 				<table>
 					<thead>
 						<tr>
@@ -105,7 +107,47 @@
 							<td class="imc-res"></td>
 							<td class="info-cond"></td>
 						</tr>
-					
+						<tr class="linha-paciente">
+							<td class="info-nome undefined">Luciana</td>
+							<td class="info-peso undefined">69</td>
+							<td class="info-altura undefined">1.62</td>
+							<td class="info-gordura undefined">5</td>
+							<td class="imc-res calcImc">26.29</td>
+							<td class="pesoSob info-cond">Sobrepeso</td>
+						</tr>
+						<tr class="linha-paciente">
+							<td class="info-nome undefined">Pâmela</td>
+							<td class="info-peso undefined">65</td>
+							<td class="info-altura undefined">1.60</td>
+							<td class="info-gordura undefined">10</td>
+							<td class="imc-res calcImc">25.39</td>
+							<td class="pesoSob info-cond">Sobrepeso</td>
+						</tr>
+						<tr class="linha-paciente">
+							<td class="info-nome undefined">Alisson</td>
+							<td class="info-peso undefined">85</td>
+							<td class="info-altura undefined">1.75</td>
+							<td class="info-gordura undefined">10</td>
+							<td class="imc-res calcImc">27.76</td>
+							<td class="pesoSob info-cond">Sobrepeso</td>
+						</tr>
+						<tr class="linha-paciente">
+							<td class="info-nome undefined">Nancy</td>
+							<td class="info-peso undefined">60</td>
+							<td class="info-altura undefined">1.59</td>
+							<td class="info-gordura undefined">5</td>
+							<td class="imc-res calcImc">23.73</td>
+							<td class="pesoNor info-cond">Peso Ideal</td>
+						</tr>
+						<tr class="linha-paciente">
+							<td class="info-nome undefined">Renato</td>
+							<td class="info-peso undefined">60</td>
+							<td class="info-altura undefined">1.59</td>
+							<td class="info-gordura undefined">5</td>
+							<td class="imc-res calcImc">23.73</td>
+							<td class="pesoNor info-cond">Peso Ideal</td>
+						</tr>
+						
 					</tbody>
 				</table>
 			</section>
@@ -116,7 +158,7 @@
 		<script src = "js/form.js"></script>
 		<script src = "js/main.js"></script>
 		<script src = "js/events.js"></script>
-		<!--<script src = "js/functions.js"></script>-->
+		<script src = "js/filter.js"></script>
 
 	</body>
 </html>

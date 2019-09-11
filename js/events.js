@@ -6,6 +6,6 @@ grid.addEventListener("dblclick",function(event){
 	},500);
 });
 
-grid.addEventListener("click",function(event){
-	console.log(event.target.textContent);
-});
+// grid.addEventListener("click",function(event){
+	// console.log(event.target.textContent);
+// });

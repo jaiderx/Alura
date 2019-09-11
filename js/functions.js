@@ -188,7 +188,7 @@ function exibeMensagensDeErro(erros) {
 
     erros.forEach(function(erro) {
         var li = document.createElement("li");
-        li.textContent = erro;
-        ul.appendChild(li);
+			li.textContent = erro;
+			ul.appendChild(li);
     });
 }

@@ -8,3 +8,5 @@ var botaoAdicionar = document.querySelector("#adicionar-paciente");
 
 var grid = document.querySelector("#tabela-pacientes");
 var ul = document.querySelector("#msgerro");
+
+var filtro = document.querySelector("#filtro");

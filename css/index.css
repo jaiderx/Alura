@@ -216,3 +216,12 @@ placeholder{
 #titulo-form{
 	text-align:left!important;
 }
+#filtro{
+	width: 200px;
+	height: 35px;
+	margin-bottom: 10px;
+}
+
+.invisible{
+	display: none;
+}
