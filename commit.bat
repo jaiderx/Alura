@@ -3,5 +3,5 @@ color 0f
 title Commit GIT
 cd %userprofile%\Downloads\introducao-javascript-inicial\introducao-javascript
 git add -A
-git commit -m "Correcao cores CSS"
+git commit -m "Reducao arquivos js"
 git push -u -f origin master
