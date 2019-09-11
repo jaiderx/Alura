@@ -17,7 +17,7 @@ function CorrigePeso() {
 	txt = Pessoa.Peso;
   } else {
 	txt = corrigepeso;
-	Pessoa.peso = txt;
+	Pessoa.Peso = txt;
   }
   Pessoa.TdPeso.textContent=txt;
 }
