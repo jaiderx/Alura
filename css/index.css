@@ -186,7 +186,7 @@ button[disabled=disabled], button:disabled {
 }
 
 .erroAltPes{
-	background-color: yellow;
+	background-color: #FFFACD;
 	color: red!important;
 	font-weight: bold;
 }
