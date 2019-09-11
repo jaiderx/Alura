@@ -23,21 +23,27 @@ function CorrigePeso() {
 }
 
 function Diagnostico(imc){
-	if (imc < 17) { //Subnutrição
+	if (imc < 16) { //Subnutrição
 			var Condicao = {
-				Cond: "Subnutrição",
+				Cond: "Magreza Grau III",
+				Class:"pesoSub"
+			}
+	}
+	if (imc >= 16 && imc < 17) { //Subnutrição
+			var Condicao = {
+				Cond: "Magreza Grau II",
 				Class:"pesoSub"
 			}
 	}
 	if (imc >= 17 && imc < 18.5) { //Abaixo do peso
 			var Condicao = {
-				Cond: "Abaixo do Peso",
+				Cond: "Magreza Grau I",
 				Class:"pesoBai"
 			}
 	}
 	if (imc >= 18.5 && imc < 25) { //Peso Ideal
 			var Condicao = {
-				Cond: "Peso Ideal",
+				Cond: "Peso Ideal - Eutrofia",
 				Class:"pesoNor"
 			}
 	}
@@ -49,19 +55,19 @@ function Diagnostico(imc){
 	}
 	if (imc >= 30 && imc < 35) { //Obesidade I
 			var Condicao = {
-				Cond: "Obesidade I",
+				Cond: "Obesidade Grau I",
 				Class:"pesoObe"
 			}
 	}
 	if (imc >= 35 && imc < 40) { //Obesidade II Severa
 			var Condicao = {
-				Cond: "Obesidade II (Severa)",
+				Cond: "Obesidade Grau II (Severa)",
 				Class:"pesoSev"
 			}
 	}
 	if (imc >= 40) { //Obesidade III Morbida
 			var Condicao = {
-				Cond: "Obesidade III (Mórbida)",
+				Cond: "Obesidade Grau III (Mórbida)",
 				Class:"pesoMor"
 			}
 	}
@@ -192,7 +198,6 @@ function exibeMensagensDeErro(erros) {
 			ul.appendChild(li);
     });
 }
-
 	
 	function incluiPaciente(Pessoa){
 		var pessoaTr = montaTr(Pessoa);
