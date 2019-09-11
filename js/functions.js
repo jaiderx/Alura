@@ -1,6 +1,6 @@
 function CorrigeAltura() {
   let txt;
-  let corrigealtura = prompt("Altura do paciente "+Pessoa.nome+" inválida! Corrija ou confirme: ",Pessoa.Altura);
+  let corrigealtura = prompt("Altura do paciente "+Pessoa.Nome+" inválida! Corrija ou confirme: ",Pessoa.Altura);
   if (corrigealtura == null || corrigealtura == "") {
 	txt = Pessoa.Altura;
   } else {
@@ -12,9 +12,9 @@ function CorrigeAltura() {
 	
 function CorrigePeso() {
   let txt;
-  let corrigepeso = prompt("Peso do paciente "+Pessoa.nome+" inválido! Corrija ou confirme: ",Pessoa.peso);
+  let corrigepeso = prompt("Peso do paciente "+Pessoa.Nome+" inválido! Corrija ou confirme: ",Pessoa.Peso);
   if (corrigepeso == null || corrigepeso == "") {
-	txt = Pessoa.peso;
+	txt = Pessoa.Peso;
   } else {
 	txt = corrigepeso;
 	Pessoa.peso = txt;
@@ -75,11 +75,11 @@ function carimbo(){
 
 function importForm(form){ //importa dados formulário
 	var Pessoa = {
-		nome:form.nome.value,
-		peso: form.peso.value,
+		Nome:form.nome.value,
+		Peso: form.peso.value,
 		Altura: form.altura.value,
 		Gordura: form.gordura.value,
-		imc: CalcImc(form.peso.value, form.altura.value)
+		Imc: CalcImc(form.peso.value, form.altura.value)
 	}
 	return Pessoa;
 }
@@ -92,11 +92,11 @@ function importDoc(clientes,i){	//importa dados HTML
 	var	tdcond = clientes[i].querySelector(".info-cond");
 	var	tdgord = clientes[i].querySelector(".info-gordura");
 	var Pessoa = {
-			nome: tdnome.textContent,
-			peso: tdpeso.textContent,
+			Nome: tdnome.textContent,
+			Peso: tdpeso.textContent,
 			Altura: tdaltura.textContent,
 			Gordura: tdgord.textContent,
-			imc: tdimc.textContent,
+			Imc: tdimc.textContent,
 			Cond: tdcond.textContent,
 			TdNome:tdnome,
 			TdImc: tdimc,
@@ -111,12 +111,12 @@ function importDoc(clientes,i){	//importa dados HTML
 function valida(pessoa){
 	var erros = [];
 	var valalt = validAlt(pessoa.Altura);
-	var valpes = validPes(pessoa.peso);
+	var valpes = validPes(pessoa.Peso);
 	if (!valalt.Valid) erros.push(valalt.Text);
 	if (!valpes.Valid) erros.push(valpes.Text);
-	if (pessoa.nome.length == 0) erros.push("Nome em branco");
+	if (pessoa.Nome.length == 0) erros.push("Nome em branco");
 	if (pessoa.Altura.length == 0) erros.push("Altura em branco");
-	if (pessoa.peso.length == 0) erros.push("Peso em branco");
+	if (pessoa.Peso.length == 0) erros.push("Peso em branco");
 	if (pessoa.Gordura.length == 0) erros.push("Percentual de gordura em branco");
 	
 	return erros;
@@ -165,12 +165,12 @@ function CalcImc(peso,altura){
 function montaTr(Pessoa){
 	var insertRow = document.createElement("tr");
 		insertRow.classList.add("linha-paciente");
-		diag = Diagnostico(Pessoa.imc);
-		insertRow.appendChild(montaTd(Pessoa.nome,"info-nome"));
-		insertRow.appendChild(montaTd(Pessoa.peso,"info-peso"));
+		diag = Diagnostico(Pessoa.Imc);
+		insertRow.appendChild(montaTd(Pessoa.Nome,"info-nome"));
+		insertRow.appendChild(montaTd(Pessoa.Peso,"info-peso"));
 		insertRow.appendChild(montaTd(Pessoa.Altura,"info-altura"));
 		insertRow.appendChild(montaTd(Pessoa.Gordura,"info-gordura"));
-		insertRow.appendChild(montaTd(Pessoa.imc,"imc-res","calcImc"));
+		insertRow.appendChild(montaTd(Pessoa.Imc,"imc-res","calcImc"));
 		insertRow.appendChild(montaTd(diag.Cond,diag.Class,"info-cond"));
 		return insertRow;
 	}
