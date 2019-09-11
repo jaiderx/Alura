@@ -12,14 +12,14 @@
     return;
 	}	
 
-	var imcCalc = CalcImc(Pessoa.Peso,Pessoa.Altura);
+	var imcCalc = CalcImc(Pessoa.peso,Pessoa.Altura);
 	var diag = Diagnostico(imcCalc);
-	
-	var pessoaTr = montaTr(Pessoa);
-	grid.appendChild(pessoaTr);	
+
+	incluiPaciente(Pessoa);
 	
 	alert("Paciente inserido com sucesso! ");
 	form.reset();
 	ul.innerHTML="";
 	
 });
+

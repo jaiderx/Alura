@@ -10,3 +10,5 @@ var grid = document.querySelector("#tabela-pacientes");
 var ul = document.querySelector("#msgerro");
 
 var filtro = document.querySelector("#filtro");
+
+var botaoImportar = document.querySelector("#importar");

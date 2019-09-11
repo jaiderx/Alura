@@ -1,4 +1,4 @@
-grid.addEventListener("dblclick",function(event){
+grid.addEventListener("dblclick",function(event){ //Remover paciente
 	event.target.parentNode.classList.add("fadeOut");
 
 	setTimeout(function(){
@@ -9,7 +9,7 @@ grid.addEventListener("dblclick",function(event){
 filtro.addEventListener("input",function(){
 	var input = this.value;
 	
-	var clientes = document.querySelectorAll(".linha-paciente"); 
+	var clientes = document.querySelectorAll(".linha-paciente"); //Filtrar Paciente
 	if(this.value.length>0){
 	
 	for (var i=0; i<clientes.length; i++) {
