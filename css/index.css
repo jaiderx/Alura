@@ -147,14 +147,14 @@ button[disabled=disabled], button:disabled {
 
 .pesoSub{	
 	font-weight: bold;
-	background-color:lightcoral;
+	background-color:#FFF0F5;
 	color:red;
 }
 
 .pesoBai{
 	font-weight: bold;
 	color:red;
-	background-color: #778899 !important;
+	background-color: #FFF0F5 !important;
 }
 
 .pesoNor{
@@ -170,18 +170,18 @@ button[disabled=disabled], button:disabled {
 .pesoObe{
 	font-weight: bold;
 	color:red;
-	background-color: #778899 !important;
+	background-color: #FFF0F5 !important;
 }
 
 .pesoSev{
 	font-weight: bold;
-	background-color:lightcoral!important;
+	background-color:#FFF0F5!important;
 	color:red;
 }
 
 .pesoMor{
 	font-weight: bold;
-	background-color:red!important;
+	background-color:#FFF0F5!important;
 	color:white;
 }
 
@@ -224,4 +224,8 @@ placeholder{
 
 .invisible{
 	display: none;
+}
+
+footer{
+	color: white;
 }
