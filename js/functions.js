@@ -43,7 +43,7 @@ function Diagnostico(imc){
 	}
 	if (imc >= 18.5 && imc < 25) { //Peso Ideal
 			var Condicao = {
-				Cond: "Peso Ideal - Eutrofia",
+				Cond: "Ideal/Eutrofia",
 				Class:"pesoNor"
 			}
 	}
@@ -203,4 +203,5 @@ function incluiPaciente(Pessoa){
 	var pessoaTr = montaTr(Pessoa);
 	grid.appendChild(pessoaTr);	
 }
+
 

@@ -3,5 +3,5 @@ color 0f
 title Commit GIT
 cd %userprofile%\Downloads\introducao-javascript-inicial\introducao-javascript
 git add -A
-git commit -m "Correção de Erros"
+git commit -m "Melhorias"
 git push -u -f origin master
