@@ -6,12 +6,9 @@ botaoImportar.addEventListener("click",function(){
 	
 	xhr.addEventListener("load",function(){
 		if (xhr.status == 200){
-			
-				botaoImportar.classList.remove("blinkOn");
-				botaoImportar.classList.add("blinkOff");
-			var response = xhr.responseText;
-			var pacientesJson = JSON.parse(response);
 
+			var pacientesJson = JSON.parse(xhr.responseText);
+			errocontd.textContent="";
 			pacientesJson.forEach(function(json){
 				var pessoaImport = {
 					Nome:json.nome,
@@ -23,17 +20,10 @@ botaoImportar.addEventListener("click",function(){
 					incluiPaciente(pessoaImport);
 			});
 			
-			console.log(carimbo()+ "Finish");
+			console.log(carimbo()+ "Dados Importados");
 			
 		}else{
-					// setTimeout(function(){
-						// botaoImportar.classList.remove("blinkOff");
-						// botaoImportar.classList.add("blinkOn");
-					// },300);
-					// setTimeout(function(){
-						// botaoImportar.classList.remove("blinkOn");
-						// botaoImportar.classList.add("blinkOff");
-					// },300);
+
 				errocontd.textContent="Erro "+xhr.status+" ao tentar recuperar dados"
 				console.log(carimbo()+"Erro");
 				console.log(xhr.status);

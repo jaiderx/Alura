@@ -10,11 +10,11 @@ body{
 }
 
 header{
-	background-color: #333;
+	background-color: black;/* #333;*/
 	height: 3em;
-	color: #A9A9A9;
+	color: white; /*#A9A9A9;*/
 	margin-bottom: 1em;
-	text-align: center!important;
+	text-align: center;
 }
 
 header h1{
@@ -53,7 +53,7 @@ section h2{
 	padding-bottom: .5em;
 	border-bottom: 1px solid #ccc;
 	margin-bottom: .5em;
-	text-align:center;
+	text-align:left;
 	color: white;
 }
 
@@ -96,6 +96,7 @@ label{
 	display: inline-block;
 	padding-right: .5em;
 	background-color:#202020;
+	width: 100%;
 }
 
 .grupo{
@@ -160,7 +161,7 @@ button[disabled=disabled], button:disabled {
 
 .pesoNor{
 	font-weight: bold;
-	color:gray;
+	color:#B0C4DE;
 }
 
 .pesoSob{
@@ -183,7 +184,7 @@ button[disabled=disabled], button:disabled {
 .pesoMor{
 	font-weight: bold;
 	background-color:#FFF0F5!important;
-	color:white;
+	color:red;
 }
 
 .erroAltPes{
@@ -230,18 +231,21 @@ placeholder{
 }
 
 #importar{
-	width: 40%;
+	width: 35%;
+}
+
+#ErroConnect{
+	font-weight: bold;
+	color: #FFC0CB;
+}
+
+#nome{
+	width: 97%;
+	display: inline-block;
+	padding: 10px 0px;
 }
 
 footer{
 	color: white;
 }
-/*
-.blinkOn{
-	background-color:#FF0000;
-}
 
-.blinkOff{
-	background-color:#778899;
-}
-*/
