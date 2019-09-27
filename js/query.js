@@ -1,16 +1,17 @@
-var tit1 = document.querySelector('.tit1');
-var aba = document.querySelector('.nomeaba');
-var tgaga2 = document.querySelector('.aga2');
+let $ = document.querySelector.bind(document);
+var tit1 = $('.tit1');
+var aba = $('.nomeaba');
+var tgaga2 = $('.aga2');
 
 var clientes = document.querySelectorAll(".linha-paciente");
-var form = document.querySelector("#formAdd");
-var botaoAdicionar = document.querySelector("#adicionar-paciente");
+var form = $("#formAdd");
+var botaoAdicionar = $("#adicionar-paciente");
 
-var grid = document.querySelector("#tabela-pacientes");
-var ul = document.querySelector("#msgerro");
+var grid = $("#tabela-pacientes");
+var ul = $("#msgerro");
 
-var filtro = document.querySelector("#filtro");
+var filtro = $("#filtro");
 
-var botaoImportar = document.querySelector("#importar");
+var botaoImportar = $("#importar");
 
-var errocontd = document.querySelector("#ErroConnect");
+var errocontd = $("#ErroConnect");
